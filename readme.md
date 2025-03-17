@@ -1,20 +1,20 @@
-STREAMING MACHINE PREDICTIVE QUALITY DEMO SETUP
+# STREAMING MACHINE PREDICTIVE QUALITY DEMO SETUP
 
-Streaming Demo Table Setup
-•	Create a database called demo_db
-•	Create a schema called streaming
-o	Create machine_tbl
-o	Create machine_stats view
-o	Create my_stage stage
-o	Create docs stage
+## Streaming Demo Table Setup
+1.  Create a database called demo_db
+2.  Create a schema called streaming
+3.  Create machine_tbl
+4.  Create machine_stats view
+5.  Create my_stage stage
+6.  Create docs stage
 
-Run GENERATE_TRAINING_DATA Notebook
+## Run GENERATE_TRAINING_DATA Notebook
 •	Add numpy package
 •	Import packages and set session
 •	Generate Training Data to Pandas DataFrame
 •	Write dataframe to train_table
 
-Run YIELD_PREDICTION Notebook
+## Run YIELD_PREDICTION Notebook
 •	Add numpy, sckit-learn and pandas packages
 •	Import packages and set session
 •	Import train_table, set features and label.  Establish train/test split
@@ -24,18 +24,18 @@ Run YIELD_PREDICTION Notebook
 •	Test UDF on train_table
 •	Run Evaluation Metrics
 
-Create Search Service mill_ss2
+## Create Search Service mill_ss2
 •	Upload mill manuals to docs stage (had to break up into two smaller files)
 •	Create and load RAW_TEXT table from pdf files in docs stage using PARSE_DOCUMENT Cortex function
 •	Create and load CHUNKED_TEXT table from RAW_TEXT table using SPLIT_TEXT_RECURSIVE_CHARACTER Cortex function
 •	Create search service from CHUNKED_TEXT table
 •	Test Search Service
 
-Create and Run Streaming Simulator
+## Create and Run Streaming Simulator
 •	Create new Streamlit app in Demo_DB database and Streaming Schema
 •	Copy and paste Streaming_sim.py
 
-Create Cortex Analyst Service 
+## Create Cortex Analyst Service 
 •	Open Cortex Analyst in demo_db database and streaming schema
 •	Choose my_stage to store the semantic file
 •	Name file machine_performance
@@ -53,10 +53,10 @@ o	Show me the current abnormal readings count per measure, per machine?
 	    Name it Abnormal reading count per machine
 •	Make sure to save your semantic model
 
-Streaming Table Setup Part II
+## Streaming Table Setup Part II
 •	Create view predictive_stats
 
-Create Dashboard
+## Create Dashboard
 •	Create new Streamlit app in Demo_DB database and Streaming Schema
 •	Copy and paste Streaming_Dashboard.py
 
