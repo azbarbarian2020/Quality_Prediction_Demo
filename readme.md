@@ -1,6 +1,6 @@
 # STREAMING MACHINE PREDICTIVE QUALITY DEMO SETUP
 
-## Streaming Demo Table Setup
+## Streaming Demo Table Setup (setup.sql)
 1.  Create a database called demo_db
 2.  Create a schema called streaming
 3.  Create machine_tbl
@@ -24,14 +24,14 @@
 7.  Test UDF on train_table
 8.  Run Evaluation Metrics
 
-## Create Search Service mill_ss2
+## Create Search Service mill_ss2 (search_service.sql)
 1.  Upload mill manuals to docs stage (had to break up into two smaller files)
 2.  Create and load RAW_TEXT table from pdf files in docs stage using PARSE_DOCUMENT Cortex function
 3.  Create and load CHUNKED_TEXT table from RAW_TEXT table using SPLIT_TEXT_RECURSIVE_CHARACTER Cortex function
 4.  Create search service from CHUNKED_TEXT table
 5.  Test Search Service
 
-## Create and Run Streaming Simulator
+## Create and Run Streaming Simulator (streaming_sim.py)
 1.  Create new Streamlit app in Demo_DB database and Streaming Schema
 2.  Copy and paste Streaming_sim.py
 
@@ -59,10 +59,10 @@ If I ask for what machine currently has the most abnormal readings, I'm asking t
        *  Name it Abnormal reading count per machine
 8.  Make sure to save your semantic model
 
-## Streaming Table Setup Part II
-1.  Create view predictive_stats
+## Streaming Table Setup Part II (setup.sql)
+1.  Create view predictive_stats 
 
-## Create Dashboard
+## Create Dashboard (streaming_dashboard.py)
 1.  Create new Streamlit app in Demo_DB database and Streaming Schema
 2.  Copy and paste Streaming_Dashboard.py
 
