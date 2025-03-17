@@ -55,7 +55,7 @@ avg(Spindle_Speed) AS spindle_speed_avg,
 
 ----------Apply PREDICT_MODEL to get real time predictions **After creating train_table and PREDICT_MODEL UDF
 
-create if not exists view predictive_stats as (
+create view if not exists predictive_stats as (
 SELECT 
     MACHINE_NAME,
     FEED_RATE_ABNORMAL_PCT,
