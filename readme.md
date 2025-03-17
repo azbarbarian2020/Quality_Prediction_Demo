@@ -60,4 +60,3 @@
 1.  Create new Streamlit app in Demo_DB database and Streaming Schema
 2.  Copy and paste Streaming_Dashboard.py
 
-![image](https://github.com/user-attachments/assets/4f7f6b3c-6d84-49af-a958-95eac7d1b15d)
