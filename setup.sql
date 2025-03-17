@@ -29,7 +29,7 @@ truncate table machine_tbl;
 
 ---------Aggergate stats from machine_tbl
 
-CREATE if not exists VIEW MACHINE_STATS AS 
+CREATE view if not exists MACHINE_STATS AS 
 select MACHINE_NAME, 
   ((SUM(CASE
     WHEN Spindle_Speed>3200THEN 1
