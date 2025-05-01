@@ -61,6 +61,7 @@ If I ask for what machine currently has the most abnormal readings, I'm asking t
 
 ## Streaming Table Setup Part II (setup.sql)
 1.  Create view predictive_stats 
+2.  Before running the dashboard or querying the predictive_status view, ensure that you've written data to all the measure columns of the machine_tbl with the streaming simulator.
 
 ## Create Dashboard (streaming_dashboard.py)
 1.  Create new Streamlit app in Demo_DB database and Streaming Schema
